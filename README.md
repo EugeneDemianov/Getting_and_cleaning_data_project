@@ -26,24 +26,24 @@ Key elements of the script:
 
 3. Renaming the values of the 'activity' variable with gsub().
 
- 1 to 'WALKING'
- 2 to 'WALKING_UPSTAIRS'
- 3 to 'WALKING_DOWNSTAIRS'
- 4 to 'SITTING'
- 5 to 'STANDING'
- 6 to 'LAYING'
+ - 1 to 'WALKING'
+ - 2 to 'WALKING_UPSTAIRS'
+ - 3 to 'WALKING_DOWNSTAIRS'
+ - 4 to 'SITTING'
+ - 5 to 'STANDING'
+ - 6 to 'LAYING'
 
 4. Renaming and lowering the measurement variables with help of gsub() tolower():
 
- '^t' to 'time'
- '^f' to 'frequency'
- 'Acc' to 'Acceleration'
- 'Mag' to 'Magnitude'
- '-X$' to 'xaxis'
- '-Y$' to 'yaxis'
- '-Z$' to 'zaxis'
- '-mean\\(\\)' to 'mean'
- '-std\\(\\)' to 'std'
+ - '^t' to 'time'
+ - '^f' to 'frequency'
+ - 'Acc' to 'Acceleration'
+ - 'Mag' to 'Magnitude'
+ - '-X$' to 'xaxis'
+ - '-Y$' to 'yaxis'
+ - '-Z$' to 'zaxis'
+ - '-mean\\(\\)' to 'mean'
+ - '-std\\(\\)' to 'std'
 
 5. Grouping the data by the 'activity' and 'subject' variables and extracting it into the 'df_tidy' with help of dplyr package, group_by(), summarise_each() with mean values of each measurement variable.
 
